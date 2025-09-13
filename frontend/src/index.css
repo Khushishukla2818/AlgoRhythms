@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.applayout {
+  grid-template-columns: 260px 1fr;
+  grid-template-rows: auto 1fr;
+}
+.sidebar {
+  grid-row: 1 / -1;
+}
+
+.navlinks:link {
+  color: #ddd;
+}
+
+.navlinks:visited {
+  color: #000;
+}
+
+.navlinks:focus {
+  text-decoration: none;
+  background: #ccc;
+}
+
+.navlinks:hover {
+  text-decoration: none;
+}
+
+.navlinks:active {
+  background: #ddd;
+}
