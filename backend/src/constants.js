@@ -1,1 +1,1 @@
-export const DB_NAME = 'SIH2024';
+export const DB_NAME = 'SIH2025';
