@@ -1,12 +1,9 @@
 import mongoose from "mongoose";
+import { DB_NAME } from "../constants.js";
 
 const connectDB = async () => {
     try {
-        // Use env variable directly
-        const connectionInstance = await mongoose.connect(process.env.MONGODB_URL, {
-            useNewUrlParser: true,
-            useUnifiedTopology: true,
-        });
+        const connectionInstance = await mongoose.connect(`${process.env.MONGODB_URL}/${DB_NAME}`);
         console.log(`MongoDB connected successfully: ${connectionInstance.connection.host}`);
     } catch (error) {
         console.log("Error connecting to MongoDB", error);
